@@ -2,7 +2,7 @@
 
 """
 Copyright (c) 2006-2017 sqlmap developers (http://sqlmap.org/)
-See the file 'doc/COPYING' for copying permission
+See the file 'LICENSE' for copying permission
 """
 
 import difflib
@@ -38,8 +38,6 @@ class _ThreadData(threading.local):
         Resets thread data model
         """
 
-        self.requestCollector = None
-
         self.disableStdOut = False
         self.hashDBCursor = None
         self.inTransaction = False
@@ -65,9 +63,6 @@ class _ThreadData(threading.local):
         self.valueStack = []
 
 ThreadData = _ThreadData()
-
-def getCurrentThreadUID():
-    return hash(threading.currentThread())
 
 def readInput(message, default=None, checkBatch=True, boolean=False):
     # It will be overwritten by original from lib.core.common

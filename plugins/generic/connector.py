@@ -2,7 +2,7 @@
 
 """
 Copyright (c) 2006-2017 sqlmap developers (http://sqlmap.org/)
-See the file 'doc/COPYING' for copying permission
+See the file 'LICENSE' for copying permission
 """
 
 import os
@@ -11,7 +11,6 @@ from lib.core.data import conf
 from lib.core.data import logger
 from lib.core.exception import SqlmapFilePathException
 from lib.core.exception import SqlmapUndefinedMethod
-from lib.core.settings import UNICODE_ENCODING
 
 class Connector:
     """
